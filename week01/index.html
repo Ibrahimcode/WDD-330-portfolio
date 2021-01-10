@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading</title>
+  </head>
+  <body>
+    <h1>WDD 330 portfolio</h1>
+    <h2>Week01</h2>
+    <ol>
+      <li><h3>Week01 notes</h3></li>
+      <ol>
+        <li>
+          <p>
+            Local storage is a native object use to store data in a key value
+            pair. aside of cookies, localStorage can be use to maintain the
+            state of an app. It can be use to store and retrieve data on
+            storage. It can also remove data that it has previously write on
+            storage
+          </p>
+        </li>
+      </ol>
+    </ol>
+    <ol>
+      <li>
+        <a href="code-example/"><h3>Week01 code example</h3></a>
+      </li>
+      <ol>
+        <li>
+          <pre>
+                <code>
+                    &lt; !DOCTYPE html &gt;
+                    &lt; html lang="en" &gt;
+                    &lt; head &gt;
+                        &lt; meta charset="UTF-8" &gt;
+                        &lt; meta name="viewport" content="width=device-width, initial-scale=1.0" &gt;
+                        &lt; title &gt; First Code Example &lt; /title &gt;
+                        
+                        <pre><code>
+                            &lt; style &gt;
+                                textarea{
+                            
+                                    width:800px;
+                                    
+                                    height: 250px;
+                                    
+                                    background-color: lightyellow;
+                                }
+                            &lt;/style&gt;
+                        </code></pre>
+                    &lt; /head &gt;
+                    &lt;body>
+                            <pre><code>
+
+                                &lt script &gt;
+                                    
+                                    function loadStory(){
+                                    
+                                    var storyName = document.getElementById("name_input").value;
+                                    
+                                    var storyHTML = localStorage.getItem(storyName);
+                                    
+                                    document.getElementById("story_editor").value = storyHTML;
+                                    
+                                    }
+                                    
+                                    function saveStory(){
+                                    
+                                    var storyName = document.getElementById("name_input").value;
+                                    
+                                    var storyHTML = document.getElementById("story_editor").value;
+                                    
+                                    localStorage.setItem(storyName, storyHTML);
+                                    
+                                    }
+                                    
+                                    function displayStory(){
+                                    
+                                    var storyHTML = document.getElementById("name_input").value;
+                                    
+                                    document.getElementById("story_display").innerHTML = storyHTML;
+                                    
+                                    }
+                                &lt; /script &gt;
+                           </code></pre>
+                        
+                            
+                            &lt; h1 &gt; Story Editor &lt;/h1 &gt;
+                            
+                            Story Name: &lt; input type="text" id=name_input&gt;&lt;/input&gt;
+                            
+                            &lt;section&gt;
+                            
+                            &lt;button onclick="loadStory()">Find and Edit It &lt;/button&gt;
+                            
+                            &lt;button onclick="saveStory()">Save It&lt;/button&gt;
+                            
+                            &lt;button onclick="displayStory()">Display It&lt;/button&gt;
+                            
+                            &lt;/section>
+                            
+                            &lt;textarea id="story_editor" placeholder="Write a totally awesome story
+                            here.">&lt;/textarea&gt;
+                            
+                            &lt;section id="story_display">&lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </code>
+            </pre>
+        </li>
+      </ol>
+    </ol>
+  </body>
+</html>
