@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Team02</title>
+  </head>
+  <body>
+    <main>
+      <input type="text" class="inputField" id="inputField1" />
+      <button type="button" onclick="inputDisplay()">click me</button>
+      <div class="display" id="displaydiv"></div>
+
+      <input type="text" class="inputField" id="inputField2" />
+      <button type="button" onclick="callSumUp()">Sum</button>
+      <div class="display" id="displaydiv2"></div>
+      <div class="add-mancine">
+        <span class="warning" id="sum-warning"></span>
+        <p class="add-result" id="result-sum"></p>
+        <button type="button" onclick="addManchine()">+ Add</button>
+      </div>
+    </main>
+
+    <script>
+      function inputDisplay() {
+        const input1 = document.getElementById("inputField1").value;
+        if (input1 == "") {
+          document.getElementById("displaydiv").innerHTML =
+            "please input a value in the text field.";
+          document.getElementById("inputField1").focus();
+        } else {
+          document.getElementById("displaydiv").innerHTML = input1;
+        }
+      }
+
+      function callSumUp() {
+        const sumNumber = parseInt(
+          document.getElementById("inputField2").value
+        );
+        sumUp(sumNumber);
+      }
+      function sumUp(number) {
+        let total = 0;
+
+        for (var i = 0; i <= number; i++) {
+          total += i;
+          // console.log(total);
+          document.getElementById("displaydiv2").innerHTML = total;
+        }
+      }
+
+      function addManchine() {
+        const firstNumber = parseFloat(
+          document.getElementById("inputField1").value
+        );
+        const secondNumber = parseFloat(
+          document.getElementById("inputField2").value
+        );
+
+        if (isNaN(firstNumber)) {
+          document.getElementById("inputField1").focus();
+          document.getElementById("result-sum").innerHTML = "";
+
+          document.getElementById("sum-warning").innerHTML =
+            "Please fill the required field above";
+        } else if (isNaN(secondNumber)) {
+          document.getElementById("inputField2").focus();
+          document.getElementById("result-sum").innerHTML = "";
+
+          document.getElementById("sum-warning").innerHTML =
+            "Please fill the required field above";
+        } else {
+          document.getElementById("sum-warning").innerHTML = "";
+          const total = firstNumber + secondNumber;
+
+          document.getElementById("result-sum").innerHTML = total;
+        }
+      }
+    </script>
+  </body>
+</html>
