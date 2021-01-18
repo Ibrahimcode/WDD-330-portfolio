@@ -3,22 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="week02-team.css" />
     <title>WDD 330 Team02</title>
   </head>
   <body>
     <main>
-      <input type="text" class="inputField" id="inputField1" />
-      <button type="button" onclick="inputDisplay()">click me</button>
-      <div class="display" id="displaydiv"></div>
-
-      <input type="text" class="inputField" id="inputField2" />
-      <button type="button" onclick="callSumUp()">Sum</button>
-      <div class="display" id="displaydiv2"></div>
+      <h3>A personal approach to the week02 team activity</h3>
+      <div class="requirement1">
+        <p>
+          The following function output the the number you input in the text
+          field.
+        </p>
+        <input type="text" class="inputField" id="inputField1" />
+        <button type="button" onclick="inputDisplay()">Output</button>
+        <div class="display" id="displaydiv"></div>
+      </div>
+      <div class="requirement2">
+        <p>
+          This add all the number up to the one you input in the text field.
+          <br />
+          eg: if you input 5, it will add 1 + 2 + 3 + 4 +5 = 15
+        </p>
+        <input type="text" class="inputField" id="inputField2" />
+        <button type="button" onclick="callSumUp()">Sum</button>
+        <div class="display" id="displaydiv2"></div>
+      </div>
       <div class="add-mancine">
+        <p>Use the button bellow to add the numbers you input above</p>
         <span class="warning" id="sum-warning"></span>
         <p class="add-result" id="result-sum"></p>
         <button type="button" onclick="addManchine()">+ Add</button>
       </div>
+      <p><a href="">Source code here!</a></p>
     </main>
 
     <script>
@@ -28,8 +44,10 @@
           document.getElementById("displaydiv").innerHTML =
             "please input a value in the text field.";
           document.getElementById("inputField1").focus();
+          document.getElementById("displaydiv").style.color = "red";
         } else {
           document.getElementById("displaydiv").innerHTML = input1;
+          document.getElementById("displaydiv").style.color = "black";
         }
       }
 
@@ -37,7 +55,16 @@
         const sumNumber = parseInt(
           document.getElementById("inputField2").value
         );
-        sumUp(sumNumber);
+        if (isNaN(sumNumber)) {
+          document.getElementById("inputField2").focus();
+          document.getElementById("displaydiv2").innerHTML =
+            "Please fill the required field above.";
+          document.getElementById("displaydiv2").style.color = "red";
+        } else {
+          document.getElementById("displaydiv2").innerHTML = "";
+          document.getElementById("displaydiv2").style.color = "black";
+          sumUp(sumNumber);
+        }
       }
       function sumUp(number) {
         let total = 0;
@@ -63,15 +90,18 @@
 
           document.getElementById("sum-warning").innerHTML =
             "Please fill the required field above";
+          document.getElementById("sum-warning").style.color = "red";
         } else if (isNaN(secondNumber)) {
           document.getElementById("inputField2").focus();
           document.getElementById("result-sum").innerHTML = "";
 
           document.getElementById("sum-warning").innerHTML =
             "Please fill the required field above";
+          document.getElementById("sum-warning").style.color = "red";
         } else {
           document.getElementById("sum-warning").innerHTML = "";
           const total = firstNumber + secondNumber;
+          document.getElementById("sum-warning").style.color = "black";
 
           document.getElementById("result-sum").innerHTML = total;
         }

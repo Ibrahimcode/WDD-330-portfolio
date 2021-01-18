@@ -4,8 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 02 Notes</title>
+    <link rel="stylesheet" href="week02-home-index.css" media="screen" />
   </head>
   <body>
-    <h1>Week 02 Notes</h1>
+    <main>
+      <h1>Week 02 Notes</h1>
+      <div class="sets note-section">
+        <h3>Sets</h3>
+        <p class="notes note-paragraph">
+          A Set in JavaScript is a set of data structure that represent a
+          collection of unique values.
+          <ol class="sets-key-points">
+            <li>It cannot include any duplicated values.</li>
+            <li>It is similar in context of a Mathematical set.</li>
+            <li>It however, don't contain Mathematical set operations such as <span class="highlight">union,</span>
+              <span class="highlight">intersection,</span> and <span class="highlight">product.</span>
+            </li>
+            <li>A set is created usint the new operator and set() constructor: <ul><li>const list = new set();</li></ul>
+            <li>You add values to a set using the add method: <ul><li>list.add(1);</li></ul>
+          </ol>
+        </p>
+      </div>
+      <div class="memory-leaks note-section">
+
+        <h3>Memory leaks</h3>
+        <p class="memory note-paragraph">
+          Memory leaks occurs when a program retains reference to a value that can longer be accessed in its memory.
+          <ol class="memory-points">
+            <li>Memory leaks can cause the averall sysmtem memory available to be reduce, and cause programs to run more slower.</li>
+            <li>weakSet() can be used to prevent memory leaks by garbage collecting any reference to a "dead object".</li>
+          </ol>
+        </p>
+      </div>
+      <div class="funtion note-section">
+        <h3>Funtions</h3>
+        <p class="function note-paragraph">
+          A function is a chunck of code that can be reference by a name, and is almost like a small-contain mini program.
+          <ol class="function-key-points">
+            <li>Funtions can help reduce repetition, and make a code easy to follow.</li>
+            <li> This is a sample of how <a href="./team/team.html" target="_blank" rel="noopener noreferrer">function works</a></li>
+            
+          </ol>
+
+        </p>
+       
+      </div>
+    </main>
   </body>
 </html>
