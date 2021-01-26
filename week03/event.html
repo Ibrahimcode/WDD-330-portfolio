@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Events Examples</title>
+    <link rel="stylesheet" href="event.css" />
+  </head>
+  <body>
+    <main>
+      <h2>View the console to see the events that occurs when you click.</h2>
+      <h4>
+        The console will show the coordinate of where the click event occurs
+        <br />
+        on the screen, page, and client (browser).
+      </h4>
+      <p id="click">Click On Me</p>
+      <p id="dblclick">Double Click On Me</p>
+      <p id="mouse">Hover On Me</p>
+
+      <div class="source">
+        <a
+          href="https://raw.githubusercontent.com/Ibrahimcode/WDD-330-portfolio/main/week02/team/team.html"
+          target="blank"
+          >Source code here!</a
+        >
+      </div>
+    </main>
+    <script>
+      function doSomething() {
+        console.log(`screen: (${event.screenX},${event.screenY}),
+           page: (${event.pageX},${event.pageY}), client:
+           (${event.screenX},${event.screenY})`);
+      }
+      addEventListener("click", doSomething);
+    </script>
+  </body>
+</html>
