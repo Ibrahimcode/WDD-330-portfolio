@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 03 Notes</title>
+    <link rel="stylesheet" href="week02-home-index.css" media="screen" />
+  </head>
+  <body>
+    <main>
+      <h1>Week 04 Notes</h1>
+      <div class="sets note-section">
+        <h3>Forms</h3>
+        <p class="notes note-paragraph">
+          The lagacy DOM have a usefull property called <b>document.forms</b> that returns a collection of all the form in the <br>
+          document in the order they appear in the markup.
+          <ol class="sets-key-points">
+            <li>
+                form also use indexing.
+                <ul><li>eg. const form = document.forms[0];</li></ul>
+            </li>
+            <li>We can also search form using it name attributes
+
+              <ul><li>eg. const form = document.forms.search; (assume search is the form name.)</li></ul>
+            </li>
+            <li>Forms object also jave a method called elements that return an HTML collection of all the elemetns contain in the form. <span class="highlight"></span>
+              <ul><li>eg. const [input, button] = forms.elements;</li></ul>
+              <span class="highlight"></span>  <span class="highlight"></span>
+            </li>
+            <li>We can also access forms controls using name attributes.
+              <ul><li>eg. const input = forms.searchInput;</li>
+                   <li>eg. const input = forms[searchInput];</li>
+              </ul>
+            </li>
+            <li>forms.submit() will submit the form authomatically.</li>
+            <li>forms.reset() will reset all the form controls back to it initial values. </li>
+            
+
+          </ol>
+        </p>
+      </div>
+      <div class="memory-leaks note-section">
+
+        <h3>Forms Controls</h3>
+        <p class="memory note-paragraph">
+          
+          <ol class="memory-points">
+            <li>  &lt;select&gt; means for drop-down list of options.  </li>
+            <li>  &lt;textarea&gt; elements for longer text entry </li>
+            <li>  &lt;button&gt; elements for submitting and reseting forms.  </li>
+            <li>  The aotofocus attribute gives focus to an element when the page load.</li>
+            
+          </ol>
+        </p>
+      </div>
+      <div class="funtion note-section">
+        <h3>Object Oriented Programming</h3>
+        <p class="function note-paragraph">
+          Object Oriented Programming is a style of programming that involves separating the code into objects that <br>
+          have properties and methods.
+          <ol class="function-key-points">
+            <li><h3>The Main Concept of OOP</h3>
+                <ol><li>Encapsulation</li>
+                    <li>Polymorphism</li>
+                    <li>Inheritance</li>
+                </ol>
+            </li>
+            <li>Classes are defined as a blueprint of an object; objects are then created as an instance of that class <br>
+                and inherited all the properties and methods of that class.
+            </li>
+            <li>Static Methods : are method that are called directly by it class rather than by instance of that class</li>
+            <li>To make a property private, use an understand (_) as the first character in the property's name.
+                <ul><li>eg. _color</li></ul>
+            </li>
+            <li>A class can inherit from another class using the <b>extentds</b> keyword in the class declaration.</li>
+            <li><h4>Polymorphism:</h4>
+                <ul><li>The concept of polymorphism means that diffennt objects can have the same methods, <br>
+                        implement them in the in different ways. This means the methods can be override.
+                </li></ul>
+            </li>
+
+            
+          </ol>
+
+        </p>
+        <h4>Mixins:</h4>
+        <p>Mixins is a way of adding properties and methods of some object to another object without using inheritance.</p>
+        
+        <h4>Modular JavaScript:</h4>
+        <p>A module is a self contain peice of code that provide functions and methods that can then be used <br>
+           in other file and by other modules. They allow you to keep part of a code in a self contained files.
+
+        </p>
+        <p class="function note-section"> 
+          <ol class="function-key-points">
+
+         
+          <li> This is a sample of how <a href="hero.html" target="_blank" rel="noopener noreferrer">forms works</a></li>
+          </ol>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
