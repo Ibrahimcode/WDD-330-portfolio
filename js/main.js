@@ -22,7 +22,7 @@ var links = [
     url: "week05/week05notes.html",
   },
   {
-    label: "Mid Term Cheking",
+    label: "Challenge One Todo",
     url: "week06/todo/todo.html",
   },
 ];
