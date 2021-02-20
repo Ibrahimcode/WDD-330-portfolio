@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  font-family: "Ubuntu", "Courier New", Courier, monospace;
+}
+
+main,
+footer {
+  width: 90%;
+  margin: auto;
+}
+
+.add-todo__input {
+  width: 60%;
+  margin: auto;
+  height: 10%;
+}
+
+/* space between the main and the footer */
+
+.add-todo {
+  padding-bottom: 10%;
+}
+
+/* style the footer */
+
+input[type="radio"] {
+  display: none;
+}
+
+.footer__label {
+  display: inline-block;
+  background-color: #d1d1d1;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .footer__label {
+  background-color: #76cf9f;
+}
+
+/* Checkbox style */
+input[type="checkbox"] {
+  -webkit-appearance: initial;
+  appearance: initial;
+  background: gray;
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: relative;
+}
+input[type="checkbox"]:checked {
+  background: red;
+}
+input[type="checkbox"]:checked:after {
+  /* Heres your symbol replacement */
+  content: "X";
+  color: #fff;
+  /* The following positions my tick in the center, 
+   * but you could just overlay the entire box
+   * with a full after element with a background if you want to */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*
+   * If you want to fully change the check appearance, use the following:
+   * content: " ";
+   * width: 100%;
+   * height: 100%;
+   * background: blue;
+   * top: 0;
+   * left: 0;
+   */
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+ol {
+  list-style: none;
+  padding-left: 0%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+li > input[type="checkbox"] {
+  flex: 0 0 10%;
+}
+
+li > label {
+  flex: 0 0 80%;
+}
+
+li > span {
+  flex: 0 0 10%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.add-todo__btn {
+  background-color: #76cf9f;
+}
+
+li {
+  border-bottom: 2px solid black;
+}
+
+.warning {
+  color: red;
+}
+
+main > h2 {
+  text-align: center;
+}

@@ -21,6 +21,10 @@ var links = [
     label: "week05 notes",
     url: "week05/week05notes.html",
   },
+  {
+    label: "Mid Term Cheking",
+    url: "week06/todo/todo.html",
+  },
 ];
 
 function appendLabelAndUrl() {

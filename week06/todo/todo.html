@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <!-- <script src="todo.js" type="module"></script> -->
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body id="body">
+    <div class="container">
+      <main>
+        <h2>Todos</h2>
+        <div class="todo-container">
+          <ol class="todo__ol" id="todo__ol">
+            <!-- <li>HI</li> -->
+          </ol>
+          <!-- <label for="todo_check" class="todo-label">
+          <input type="checkbox" name="" id="todo-check" class="todo-check" />
+        </label>
+        <span class="task" id="task"></span>
+        <input type="button" name="" id="" value="X" /><br /> -->
+        </div>
+
+        <div class="add-todo">
+          <span id="warning" class="warning"></span> <br />
+          <input
+            type="text"
+            class="add-todo__input"
+            id="add-todo__input"
+            placeholder="Add your task here"
+          />
+          <input
+            type="button"
+            value="+"
+            class="add-todo__btn"
+            id="add-todo__button"
+          />
+          <br />
+          <!-- <input type="button" value="get todo" id="get-todo" />
+          <input type="button" value="clear LS" id="clearLS" /> -->
+        </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <input type="radio" name="checked" id="checked1" />
+          <label for="checked1" class="footer__label"
+            ><span><span id="task_left"></span> task left</span></label
+          >
+          <input type="radio" name="checked" id="checked2" />
+          <label for="checked2" class="footer__label">All</label>
+          <input type="radio" name="checked" id="checked3" />
+          <label for="checked3" class="footer__label">Active</label>
+          <input type="radio" name="checked" id="checked4" />
+          <label for="checked4" class="footer__label">Completed</label>
+        </div>
+      </footer>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
