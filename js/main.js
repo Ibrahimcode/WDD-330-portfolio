@@ -25,6 +25,10 @@ var links = [
     label: "Challenge One: Todo",
     url: "week06/todo/todo.html",
   },
+  {
+    label: "week07 notes",
+    url: "week07/week07notes.html",
+  },
 ];
 
 function appendLabelAndUrl() {
