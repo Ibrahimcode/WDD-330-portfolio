@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 09 Notes</title>
+    <link rel="stylesheet" href="week02-home-index.css" media="screen" />
+  </head>
+ 
+  <body>
+    <main>
+      <h1>Week 09 Notes</h1>
+      <div class="sets note-section">
+            <h3>The Window Object </h3>
+            <p class="notes note-paragraph">
+                Every JavaScript environment has a <b>global object</b> . And any variables that are created
+                in the global scope are actually properties of <br> this object, and any functions are
+                methods of it. <br>
+                In a browser environment the global object is the window object,
+                which represents the browser window that contains a web page.
+            </p>
+
+            <h3>The Browser Object Model</h3>
+            <p class="notes note-paragraph">
+                The Browser Object Model (or BOM for short) is a collection of properties and
+                methods that contain information about the browser and computer screen.
+                <ol class="sets-key-points">
+                    <li>
+                        The Broswer Object Model can only make sense in a Broswer environment.
+                        
+                    </li>
+                   
+                   
+        
+                </ol>
+            </p>
+            <h3>Global Variable</h3>
+            <p class="notes note-paragraph">
+                These are variables that are created without using the const , let or var
+                keywords.
+                <ol class="sets-key-points">
+                    <li>
+                        Global variables can be accessed in all parts of the program.
+                        
+                    </li>
+                    <li>
+                        Global variables are actual properties of a global object.
+            
+                    </li>
+                    <li>
+                        
+                        In a browser environment, the global object is the window object. 
+                        This means that any global variable created is actually a property of the
+                        window object.
+
+                    </li>
+                    
+        
+                </ol>
+            </p>
+
+
+      </div>
+      <div class="memory-leaks note-section">
+
+        <h3>Dialogs</h3>
+        <p class="memory note-paragraph">
+          The three functions that produced dialogs in the
+          browsers are: alert() , confirm() and prompt() .
+
+          <ol class="sets-key-points">
+            <li>
+                <h4>window.alert()</h4>
+                The window.alert() method will pause the execution of the program and display  <br>
+                a message in a dialog box.
+
+                
+                
+            </li>
+            <li><h4>window.confirm()</h4>
+                The window.confirm() method will stop the execution of the program and <br>
+                display a confirmation dialog that shows the message provided as an argument, <br>
+                and giving the options of OK or Cancel. <br>
+                t returns the boolean values of true if the user clicks OK, and false if the user <br> 
+                clicks Cancel:
+    
+            </li>
+            <li>
+                <h4>Window.alert()</h4>
+                The window.prompt() method will stop the execution of the program. It displays <br>
+                a dialog that shows a message provided as an argument, as well as an input field <br>
+                that allows the user to enter text.  <br>
+                This text is then returned as a string when the user clicks OK. If the user clicks Cancel, <br>
+                null is returned:
+
+            </li>
+            
+            
+
+        </ol>
+          
+        </p>
+      </div>
+      <div class="funtion note-section">
+        <h3>Browser Information  </h3>
+        <p class="function note-paragraph">
+            The window object has a number of properties and methods that provide <br>
+            information about the user’s browser.
+
+            <ol>
+                <li> 
+                    <h4>window.location</h4>
+                    The window.location property is an object that contains information about the <br>
+                    URL of the current page.
+               </li>
+
+            </ol>
+          
+        </p>
+
+        <h3>The Browser History</h3>
+        <p class="function note-paragraph">
+            The window.history property can be used to access information about any <br>
+            previously visited pages in the current browser session.
+            <ol>
+                <li> 
+                    <h4>window.history.length</h4>
+                    The window.history.length property shows how many pages have been visited <br>
+                    before arriving at the current page.
+               </li>
+               <li> <h4>window.history.go()</h4>
+                The window.history.go() method can be used to go to a specific page, where 0 <br>
+                is the current page:
+               </li>
+            </ol>
+          
+        </p>
+        <h3>Controlling window</h3>
+        <p>
+            A new window can be opened using the window.open() method. This takes the <br>
+            URL of the page to be opened as its first parameter, the window title as its second <br>
+            parameter, and a list of attributes as the third parameter. <br>
+            The close() method can be used to close a window
+        </p>
+
+        <h3>Screen Information</h3>
+        <p>
+            The window.screen object contains information about the screen the browser is <br>
+            displayed on.
+            <ol>
+                <li>
+                    You can find out the height and width of the screen in pixels using
+                    the height and width properties.
+                    <ul>
+                        <li>
+                            eg. window.screen.height
+                        </li>
+                    </ul>
+
+                </li>
+            </ol>
+        </p>
+
+
+       
+        
+        
+        
+      </div>
+      <div class="funtion note-section">
+        <h3>Cookies   </h3>
+    
+        <p class="function note-paragraph">
+            Cookies are small files that are saved locally on a user’s computer.
+          
+        </p>
+       
+        <p class="function note-paragraph">
+            A restriction of cookies is that they can only be read by a web page from the same <br>
+            domain that set them.
+            
+        </p>
+        <p class="function note-paragraph">
+            Cookies are also limited to storing upto 4KB of data, although 20 cookies are allowed <br>
+            per domain, which can add up to quite a lot of data.
+            
+        </p>
+        <p class="funtion note-paragraph">
+            Cookies take the form of a text file that contain a list of name/value pairs <br>
+            separated by semicolons.
+        </p>
+        
+        <h4>Secure Cookies</h4>
+        <p class="function note-paragraph">
+            Adding the string '; secure' to the end of a cookie will ensure it’s only transmitted <br>
+            over a secure HTTPS networ
+        </p>
+        <h4>Deleting Cookies</h4>
+  
+        <p class="function note-paragraph">
+            To remove a cookie, you need to set it to expire at a time in the past.
+        </p>
+       
+      </div>
+      <!-- <div class="funtion note-section">
+        <h3>Canvas   </h3>
+        
+        <p class="function note-paragraph">
+            With HTML5' <sup>s</sup> canvas API, we can draw anythin we can immagine, <br>
+            all throught JavaScript.
+          
+        </p>
+        
+      </div>
+      <div class="funtion note-section">
+        <h3>Drag And Drop   </h3>
+        
+        <p class="function note-paragraph">
+            The drag and drop API allows us to specify that certain elements are draggable, <br>
+            and then specify what should happen when these draggable elements are dragged <br>
+            over or dropped onto other elements on the page.
+          
+        </p>
+       
+      </div> -->
+    </main>
+  </body>
+</html>
+

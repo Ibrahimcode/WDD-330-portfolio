@@ -33,6 +33,10 @@ var links = [
     label: "week08 notes",
     url: "week08/week08notes.html",
   },
+  {
+    label: "week09 notes",
+    url: "week09/week09notes.html",
+  },
 ];
 
 function appendLabelAndUrl() {
