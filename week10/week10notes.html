@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10 Notes</title>
+    <link rel="stylesheet" href="week02-home-index.css" media="screen" />
+  </head>
+  <body>
+    <main>
+      <h1>Week 10 Notes</h1>
+      <div class="sets note-section">
+        <h3>Client-side form validation</h3>
+        <p class="notes note-paragraph">
+          Client-side validation is an initial check that helps ensure data
+          submitted matches the requirements set forth in the various form
+          controls.
+        </p>
+        <ol>
+          <li>
+            Client-side validation should not be considered an exhaustive
+            security measure!
+          </li>
+          <li>
+            Apps should always perform security checks on any form-submitted
+            data on the server- side as well as the client-side, because
+            client-side validation is too easy to bypass
+          </li>
+        </ol>
+        <h3>Types of Form Validation</h3>
+        <ol>
+          <li>
+            <b> Client-side validation: </b> This is the type of validation that
+            is done on the client side or the browser.
+          </li>
+          <li>
+            <b> Server-side validation: </b> This is the type of validation that
+            is done on the Server after the data has been submitted.
+          </li>
+        </ol>
+        <h3>Why Validating Forms</h3>
+        <ol>
+          <li>
+            <b
+              >We validate forms when we want to get the right data, in the
+              right format.</b
+            >
+            applications won't work properly if our users' data is stored in the
+            wrong format, is incorrect, or is omitted altogether.
+          </li>
+          <li>
+            <b
+              >We validate forms when we validate forms when we want to protect
+              our users' data.</b
+            >Forcing our users to enter secure passwords makes it easier to
+            protect their account information.
+          </li>
+          <li><b>We validate forms when we want to protect ourselves.</b></li>
+        </ol>
+        <h3>Types of Client Side Form Validation</h3>
+        <ol>
+          <li>
+            <b>Built-in form validation:</b> This uses HTML5 form validation
+            features.
+          </li>
+          <li>
+            <b>JavaScript Validation:</b> This validation is completely
+            customizable and is coded using JavaScript
+          </li>
+        </ol>
+      </div>
+      <div class="sets note-section">
+        <h3>Built-in Form Validation Attributes</h3>
+        <ul>
+          <li>
+            <b>required :</b> Specifies whether a form field needs to be filled
+            in before the form can be submitted
+          </li>
+          <li>
+            <b> minlength and maxlength :</b> Specifies the minimum and maximum
+            length of textual data (strings)
+          </li>
+          <li>
+            <b> min and max :</b> Specifies the minimum and maximum values of
+            numerical input types
+          </li>
+          <li>
+            <b> type :</b> Specifies whether the data needs to be a number, an
+            email address, or some other specific preset type.
+          </li>
+          <li>
+            <b>pattern :</b> Specifies a regular expression that defines a
+            pattern the entered data needs to follow.
+          </li>
+        </ul>
+      </div>
+      <div class="sets note-section">
+        <h3>Validate Using JavaScript</h3>
+        <h4>The Constraint Validation API</h4>
+        <p class="notes note-paragraph">
+          The Constraint validation API makes the following properties available
+          on form elements.
+        </p>
+        <ul>
+          <li>
+            <b> validationMessage </b>: Returns a localized message describing
+            the validation constraints that the control doesn't satisfy.
+          </li>
+          <li>
+            <b>validity</b>: Returns a ValidityState object that contains
+            several properties describing the validity state of the element.
+            <ul>
+              <b> common ValidityState prooperties:</b>
+              <li>
+                <b> patternMismatch </b>: Returns true if the value does not
+                match the specified pattern , and false if it does match.
+              </li>
+              <li>
+                <b> tooLong</b> : Returns true if the value is longer than the
+                maximum length specified by the maxlength attribute, or false if
+                it is shorter than or equal to the maximum.
+              </li>
+              <li>
+                <b> rangeOverflow</b> : Returns true if the value is greater
+                than the maximum specified by the max attribute, or false if it
+                is less than or equal to the maximum.
+              </li>
+              <li>
+                <b> rangeUnderflow</b> : Returns true if the value is less than
+                the minimum specified by the min attribute, or false if it is
+                greater than or equal to the minimum.
+              </li>
+              <li>
+                <b> typeMismatch</b> : Returns true if the value is not in the
+                required syntax, or false if the syntax is correct.
+              </li>
+              <li>
+                <b> valid</b> : Returns true if the element meets all its
+                validation constraints, and is therefore considered to be valid,
+                or false if it fails any constraint.
+              </li>
+              <li>
+                <b> valueMissing </b>: Returns true if the element has a
+                required attribute, but no value, or false otherwise.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sets note-section">
+        <h3>Fetch API</h3>
+        <p>
+          The Fetch API provides a JavaScript interface for accessing and
+          manipulating parts of the HTTP pipeline, such as requests and
+          responses. This allows us to fetch resources asynchronously across
+          networks. <br />
+          Below is an example of an a basic fetch request.
+        </p>
+        <ul>
+          <pre>
+            fetch('http://example.com/movies.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+          </pre>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
