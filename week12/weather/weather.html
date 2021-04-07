@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="current-container">
+        <div id="location">Unable to Fetch Weather</div>
+        <img src="" alt="" srcset="" id="weather-icon" />
+        <div class="desc">No Information Available.</div>
+        <div class="weather">
+          <div class="c">Error</div>
+          <div class="circle"></div>
+          <div class="f">Error</div>
+        </div>
+        <div class="info">
+          <h4>
+            Sunrise: <span class="sunrise">No Information Available</span>
+          </h4>
+          <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+        </div>
+      </div>
+      <div class="forecast-container">
+        <div class="search-city">
+          <h2>Forecast</h2>
+          <label for="city-search">City</label>
+          <input
+            type="text"
+            name="city-search"
+            id="js-city-search"
+            placeholder="Paris"
+          />
+          <input type="button" value="Search" id="js-city-submit-btn" />
+          <span class="warning" id="warning"></span>
+        </div>
+        <div class="daily-forecast">
+          <div class="daily-forecast-container" id="daily-forecast"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/scripts.js" type="module"></script>
+  </body>
+</html>
