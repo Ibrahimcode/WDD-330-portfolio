@@ -16,7 +16,7 @@ export default class Dom {
     // img.setAttribute("id", day - img);
     img.setAttribute(
       "srcset",
-      `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     );
     let locationDiv = document.createElement("div");
     locationDiv.setAttribute("class", "daily-location");
