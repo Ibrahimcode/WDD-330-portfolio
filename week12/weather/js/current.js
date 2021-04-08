@@ -20,7 +20,7 @@ export default class Current {
     const sunrise = data.sunrise;
     const sunset = data.sunset;
 
-    const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
     const fahrenheit = (temp * 9) / 5 + 32;
 
     // Converting Epoch(Unix) time to GMT
