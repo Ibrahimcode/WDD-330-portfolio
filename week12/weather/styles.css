@@ -80,7 +80,7 @@ body {
   margin: 5%;
 }
 img {
-  /* animation: icon-move 5s linear infinite; */
+  animation: icon-move 5s linear infinite;
 }
 
 .daily-location {
